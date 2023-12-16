@@ -2,7 +2,7 @@ from DispositivosEntrada import DispositivoEntrada
 class Teclado(DispositivoEntrada):
     contador_teclados = 0
     def __init__(self, tipo_entrada, marca):
-        super(tipo_entrada, marca)
+        super().__init__(tipo_entrada, marca)
         Teclado.contador_teclados += 1
         self.__id_teclado = Teclado.contador_teclados
 

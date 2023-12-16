@@ -23,3 +23,9 @@ class Orden:
 
     def agregarComputadora(self, computadora: Computadora):
         self.computadoras.append(computadora)
+
+    def __str__(self):
+        listado = ''
+        for computadora in self.__computadoras:
+            listado += f'{computadora}\n'
+        return listado
