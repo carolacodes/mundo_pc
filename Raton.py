@@ -1,9 +1,10 @@
-from DispositivosEntrada import DispositivosEntrada
-class Raton(DispositivosEntrada):
+from DispositivosEntrada import DispositivoEntrada
+class Raton(DispositivoEntrada):
 
     contador_ratones = 0
     
-    def __init__(self, id_raton):
+    def __init__(self, tipo_entrada, marca):
+        super().__init__(tipo_entrada, marca)
         Raton.contador_ratones += 1
         self.__id_raton = Raton.contador_ratones
 

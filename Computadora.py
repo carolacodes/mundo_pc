@@ -1,21 +1,20 @@
 from Monitor import Monitor
 from Teclado import Teclado
 from Raton import Raton
-from Orden import Orden
-from DispositivosEntrada import DispositivosEntrada
+
+
 
 
 class Computadora:
     contador_computadoras = 0
 
-    def __init__(self, nombre, monitor : Monitor, teclado : Teclado, raton : Raton , orden : Orden) :
+    def __init__(self, nombre, monitor : Monitor, teclado : Teclado, raton : Raton) :
         Computadora.contador_computadoras += 1
         self.__id_computadora = Computadora.contador_computadoras
         self.__nombre = nombre
         self.__monitor = monitor 
         self.__teclado = teclado
         self.__raton = raton
-        self.__orden = orden
 
     @property
     def id_computadora(self):
@@ -42,7 +41,7 @@ class Computadora:
         self.__monitor = monitor
 
     @property
-    def teclado (self, teclado):
+    def teclado (self):
         return self.__teclado
     
     @teclado.setter
@@ -66,9 +65,7 @@ class Computadora:
         self.__orden = orden
 
     def __str__(self):
-        return f'[ID COMPUTADORA: {self.id_computadora} 
-        Nombre: {self.nombre} Monitor: {self.monitor.__str__} Teclado: {self.teclado.__str__} 
-        Raton {self.raton.__str__}]'
+        return f'Nombre: {self.nombre} ID: {self.id_computadora}\n\t{self.monitor}\n\t{self.teclado}\n\t{self.raton}'
         
     
 
